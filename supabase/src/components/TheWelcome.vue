@@ -8,5 +8,5 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
- <h1>My fish need me.</h1>
+ <h1>My fish need me. I'm scared that Alice is going to eat my pets.</h1>
 </template>

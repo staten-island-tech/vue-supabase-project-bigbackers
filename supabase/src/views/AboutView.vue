@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Hi I'm Bernice Li!</h1>
+    <h1></h1>
   </div>
 </template>
 

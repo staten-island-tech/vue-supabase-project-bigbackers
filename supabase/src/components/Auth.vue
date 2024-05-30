@@ -13,7 +13,7 @@
       <input
         type="submit"
         class="button block"
-        :value="loading ? 'Loading' : 'Submit'"
+        :value="loading ? 'Loading' : 'Login'"
         :disabled="loading"
       />
     </div>

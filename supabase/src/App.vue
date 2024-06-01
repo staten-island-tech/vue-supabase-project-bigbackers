@@ -1,4 +1,35 @@
+<template>
+  <RouterView />
+</template>
 <script setup>
+import { onMounted, ref, watch } from 'vue'
+import { supabase } from './lib/supabaseClient';
+import { useAuthStore } from './stores/storee'
+
+import { RouterLink, RouterView } from 'vue-router'
+
+const component = {
+  methods: {
+    logOut: function () {
+      useAuthStore().clearUser()
+      router.push('login')
+      this.loggedin = false
+    },
+    login: function () {
+      this.loggedin = true
+    }
+  },
+  data() {
+    return {
+      loggedin: false
+    }
+  }
+}
+</script>
+<style scoped></style>
+
+
+<!-- <script setup>
 import { onMounted, ref } from 'vue'
 import Account from './components/Account.vue'
 import Auth from './components/Auth.vue'
@@ -15,11 +46,11 @@ onMounted(() => {
     session.value = _session
   })
 })
-</script>
+</script> -->
 
-<template>
+<!-- <template>
   <div class="container" style="padding: 50px 0 100px 0">
     <Account v-if="session" :session="session" />
     <Auth v-else />
   </div>
-</template>
+</template> -->

@@ -41,21 +41,18 @@
   async function signUp() {
     const { user, error } = await supabase.auth.signUp({
       email: email.value,
-      password: password.value
+      password: password.value,
+      email_confirm: true,
     })
-    router.push('login')
     if (error) {
       console.log(error)
+      window.alert('Error signing up: ' + error.message)
       
     } else {
       console.log(user)
-      const { data, error } = await supabase.from('Profiles').insert({ email: email.value })
-      if (error) {
-        console.log(error)
-      } else {
-        console.log(data)
-      }
+      window.alert('Email created! Login now')
     }
+    router.push('login')
   }
   </script>
   

@@ -33,16 +33,14 @@
   const password = ref('')
   const router = useRouter()
   
-  async function signIn() {
+  const signIn = async () => {
     try {
       await supabase.auth.signInWithPassword({
         email: email.value,
         password: password.value
       })
-  
-      let {
-        data: { user }
-      } = await supabase.auth.getUser()
+      const { data: { user } } = await supabase.auth.getUser()
+      console.log(email, password, user)
       useAuthStore().loadUser(user.id)
       router.push('store')
     } catch (error) {

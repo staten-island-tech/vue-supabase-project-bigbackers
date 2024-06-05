@@ -51,11 +51,11 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #ff7f50; /* Coral color */
+  background-color: rgb(255, 127, 80); /* Coral color */
 }
 
 .navbar-brand {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 

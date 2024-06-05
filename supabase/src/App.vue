@@ -1,10 +1,14 @@
 <template>
-  <RouterView />
+  <div class="app">
+    <Navbar />
+    <RouterView />
+  </div>
 </template>
 <script setup>
 import { onMounted, ref, watch } from 'vue'
 import { supabase } from './lib/supabaseClient';
 import { useAuthStore } from './stores/storee'
+import Navbar from './components/Navbar.vue'
 
 import { RouterLink, RouterView } from 'vue-router'
 
@@ -26,7 +30,9 @@ const component = {
   }
 }
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>
 
 
 <!-- <script setup>

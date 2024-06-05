@@ -42,7 +42,7 @@
       const { data: { user } } = await supabase.auth.getUser()
       console.log(email, password, user)
       useAuthStore().loadUser(user.id)
-      router.push('store')
+      router.push('/homeblog')
     } catch (error) {
       this.errormessage = 'Couldnt log you in, please check your credentials or try again later.'
       console.error(error)

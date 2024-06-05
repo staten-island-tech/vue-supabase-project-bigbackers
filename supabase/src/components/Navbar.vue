@@ -1,18 +1,20 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" v-if="$route.name !== 'Login'">
-      <router-link class="navbar-brand" to="/">Welcome {{ user && user.email }}!</router-link>
+      <div class="navbar-content">
+        <router-link class="navbar-brand" to="/">Welcome {{ user && user.email }}!</router-link>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <router-link class="nav-link" to="/create">Create</router-link>
+            <router-link class="nav-link" to="/create">CREATE</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/edit">Edit</router-link>
+            <router-link class="nav-link" to="/edit">EDIT</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" @click.prevent="signout">Logout</a>
+            <a class="nav-link" @click.prevent="signout">LOGOUT</a>
           </li>
         </ul>
+      </div>
       </div>
     </nav>
   </template>
@@ -48,17 +50,25 @@
   
 <style scoped>
 .navbar {
+  padding: 2rem;
+  background-color: #f5f5f5; 
+}
+
+.navbar-content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: rgb(255, 127, 80); /* Coral color */
+  width: 100%;
+}
+.navbar-brand, .nav-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .navbar-brand {
-  color: rgb(255, 255, 255);
   text-decoration: none;
 }
-
 .navbar-menu {
   display: flex;
 } 
@@ -71,17 +81,4 @@
   gap: 1rem;
 }
 
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: #ddd;
-}
-
-.nav-item.active .nav-link {
-  color: #f8f9fa;
-  background-color: transparent;
-}
 </style>

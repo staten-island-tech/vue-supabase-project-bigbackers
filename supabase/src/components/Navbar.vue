@@ -61,7 +61,7 @@
 
 .navbar-menu {
   display: flex;
-}
+} 
 
 .navbar-nav {
   display: flex;

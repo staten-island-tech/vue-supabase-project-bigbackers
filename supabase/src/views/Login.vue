@@ -40,7 +40,6 @@
         password: password.value
       })
       const { data: { user } } = await supabase.auth.getUser()
-      console.log(email, password, user)
       useAuthStore().loadUser(user.id)
       router.push('/homeblog')
     } catch (error) {

@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" v-if="$route.name !== 'Login'">
-      <router-link class="navbar-brand" to="/">Navbar</router-link>
+      <router-link class="navbar-brand" to="/">Welcome {{ user && user.email }}!</router-link>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -10,17 +10,40 @@
             <router-link class="nav-link" to="/edit">Edit</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/logout">Logout</router-link>
+            <a class="nav-link" @click.prevent="signout">Logout</a>
           </li>
         </ul>
       </div>
     </nav>
   </template>
   
-  <script>
-  export default {
-    name: 'Navbar',
-  }
+  <script setup>
+  import { ref, onMounted } from 'vue'
+  import { useRoute, useRouter } from 'vue-router'
+  import { supabase } from '@/supabase' // adjust this import to your setup
+
+  const route = useRoute()
+  const router = useRouter()
+  const user = ref(null)
+
+  onMounted(async () => {
+    const { data: { session } } = await supabase.auth.getUser()
+    if (session) {
+      user.value = session.user
+      console.log(user)
+    } else {
+      supabase.auth.onAuthStateChange((event, session) => {
+        user.value = session ? session.user : null
+        console.log(user)
+      })
+    }
+  })
+  
+
+  const signout = async () => {
+    await supabase.auth.signOut()
+    router.push({ name: 'Login' })
+}
   </script>
   
 <style scoped>

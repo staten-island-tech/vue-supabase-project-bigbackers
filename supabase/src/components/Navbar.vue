@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" v-if="$route.name !== 'Login'">
       <div class="navbar-content">
         <router-link class="navbar-brand" to="/">Welcome {{ user && user.email }}!</router-link>
@@ -81,4 +81,4 @@
   gap: 1rem;
 }
 
-</style>
+</style> -->

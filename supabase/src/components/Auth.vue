@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 <form class="row flex-center flex" @submit.prevent="handleLogin">
   <div class="col-6 form-widget">
     <h1 class="header">Login</h1>
@@ -48,4 +48,4 @@ const handleLogin = async () => {
 
 <style lang="scss" scoped>
 
-</style>
+</style> -->

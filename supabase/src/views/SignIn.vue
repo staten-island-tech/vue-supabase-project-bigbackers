@@ -11,8 +11,38 @@
     </div>
 </template>
 
-<script setup>
+<script>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '../stores/auth'
 
+export default {
+  setup() {
+    const email = ref('')
+    const password = ref('')
+    const error = ref('')
+    const authStore = useAuthStore()
+    const router = useRouter()
+
+    const signIn = async () => {
+      try {
+        const user = await authStore.signIn(email.value, password.value)
+        if (user) {
+          router.push('/welcome')
+        }
+      } catch (err) {
+        error.value = err.message
+      }
+    }
+
+    return {
+      email,
+      password,
+      signIn,
+      error,
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

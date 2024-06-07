@@ -105,9 +105,16 @@ export default {
   margin-bottom: 0.6rem;
   margin-top: 0rem;
   font-size: 1.5rem;
+  background-color: rgb(42, 67, 159);
+  color: white;
+  border-radius: 10px;
 }
 .addtodo{
   font-size: 1.5rem;
+  background-color: rgb(42, 67, 159);
+  color: white;
+  border-radius: 10px;
+  margin-left: 1rem;
 }
 .insertuh{
   font-size: 1.5rem;

@@ -1,18 +1,18 @@
 <template>
   <div>
     <div v-if="user">
-      <h2>Welcome Home</h2>
+      <h2 class="welcomehome">Welcome Home!</h2>
       <button @click="signOut" class="signout">Sign Out</button>
     </div>
-    <div v-else>
-      <h2>Sign In</h2>
+    <div v-else class="signinbox">
+      <h2 class="signinheading">Sign In</h2>
       <form @submit.prevent="signIn" >
         <input v-model="email" type="email" placeholder="Email" required class="email"/>
         <input v-model="password" type="password" placeholder="Password" required class="password"/>
         <button type="submit" class="signin">Sign In</button>
       </form>
       <p>{{ error }}</p>
-      <p>Don't have an account? <router-link to="/signup">Sign Up</router-link></p>
+      <p class="noacc">Don't have an account? <router-link to="/signup">Sign Up</router-link></p>
     </div>
   </div>
 </template>
@@ -63,15 +63,35 @@ export default {
 
 <style>
 .email{
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .password{
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .signin{
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+.signinheading{
+  font-size: 2.6rem;
 }
 .signup{
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+.noacc{
+  font-size: 1.5rem;
+}
+.welcomehome{
+  font-size:3rem;
+}
+.signout{
+  font-size: 2rem;
+}
+.signinbox {
+  background-color: rgb(168, 219, 238);
+  width: 1000px;
+  height: 300px;
+  align-items: center;
+  margin-left: 30rem;
+  border-radius: 10px;
 }
 </style>

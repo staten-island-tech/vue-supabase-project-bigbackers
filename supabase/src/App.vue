@@ -73,6 +73,25 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+  nav {
+  margin-bottom: 20px;
+}
 
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #42b983;
+}
+
+nav a.router-link-exact-active {
+  font-weight: bold;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

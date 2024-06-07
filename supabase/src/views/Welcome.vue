@@ -4,11 +4,11 @@
     <div v-if="user">
       <div>
         <h2>Welcome, {{ user.email }}</h2>
-        <button @click="logout">Logout</button>
+        <button @click="logout" class="logout">Logout</button>
       </div>
       <form @submit.prevent="addTodo">
-        <input v-model="newTodo" type="text" placeholder="New To-do" required />
-        <button type="submit">Add To-do</button>
+        <input v-model="newTodo" type="text" placeholder="New To-do" required class="insert"/>
+        <button type="submit" class="addtodo">Add To-do</button>
       </form>
       <h2>📥 To-do List</h2>
       <ul>
@@ -16,8 +16,8 @@
           <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }">
             {{ todo.text }}
           </span>
-          <button @click="removeTodo(todo.id)">Remove</button>
-          <button @click="markTodoAsCompleted(todo.id)" v-if="!todo.completed">Mark as Completed</button>
+          <button @click="removeTodo(todo.id)" class="remove">Remove</button>
+          <button @click="markTodoAsCompleted(todo.id)" v-if="!todo.completed" class="complete">Mark as Completed</button>
         </li>
       </ul>
     </div>
@@ -81,6 +81,26 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.remove{
+  margin: 0.2rem;
+  font-size: 1rem;
+  margin-left: 2em;
+}
+.complete{
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+.logout{
+  margin-bottom: 0.6rem;
+  margin-top: 0rem;
+  font-size: 1rem;
+}
+.addtodo{
+  font-size: 1rem;
+}
+.insert{
+  font-size: 1rem;
+}
 
 </style> 

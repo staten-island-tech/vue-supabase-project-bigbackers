@@ -6,7 +6,7 @@
     </div>
     <div v-else>
       <h2>Sign In</h2>
-      <form @submit.prevent="signIn">
+      <form @submit.prevent="signIn" >
         <input v-model="email" type="email" placeholder="Email" required />
         <input v-model="password" type="password" placeholder="Password" required />
         <button type="submit">Sign In</button>

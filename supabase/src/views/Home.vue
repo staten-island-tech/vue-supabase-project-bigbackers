@@ -68,4 +68,10 @@ export default {
 .password{
   font-size: 1rem;
 }
+.signin{
+  font-size: 1rem;
+}
+.signup{
+  font-size: 1rem;
+}
 </style>

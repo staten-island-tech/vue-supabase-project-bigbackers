@@ -1,4 +1,5 @@
 <template>
+<div class="whole">
   <div>
     <div v-if="user">
       <h2 class="welcomehome">Welcome Home!</h2>
@@ -17,6 +18,7 @@
       <heading class="noacc">Don't have an account? <router-link to="/signup">Sign Up</router-link></heading>
     </div>
   </div>
+</div>
 </template>
 
 <script >
@@ -96,8 +98,15 @@ export default {
   align-items: center;
   margin-left: 30rem;
   border-radius: 10px;
+  margin-top: 0px;
 }
 .bigheading{
   font-size: 2.6rem;
 }
+/* .whole{
+  background-color: antiquewhite;
+  height: 100%;
+  width:100%;
+} */
+
 </style>

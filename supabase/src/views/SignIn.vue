@@ -65,6 +65,7 @@ export default {
   align-items: center;
   margin-left: 30rem;
   border-radius: 10px;
+  
 }
 .signinheading{
   font-size: 2.6rem;

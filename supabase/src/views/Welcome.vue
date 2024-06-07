@@ -3,7 +3,7 @@
     <h1>Your To-Do List</h1>
     <div v-if="user">
       <div>
-        <h2>Welcome, {{ user.email }}</h2>
+        <h2>Welcome, {{ user.email }}!!!</h2>
         <button @click="logout" class="logout">Logout</button>
       </div>
       <form @submit.prevent="addTodo">

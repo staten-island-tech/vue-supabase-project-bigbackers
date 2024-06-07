@@ -59,7 +59,7 @@ export default {
   font-size: 1.5rem;
 }
 .signinbox {
-  background-color: bisque;
+  background-color: rgb(168, 219, 238);
   width: 1000px;
   height: 300px;
   align-items: center;

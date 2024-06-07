@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>Your To-Do List</h1>
+    <h1 class="uh">Your To-Do List</h1>
     <div v-if="user">
       <div>
-        <h2>Welcome, {{ user.email }}!!!</h2>
+        <h2 class="welcomemsg">Welcome, {{ user.email }}!!!</h2>
         <button @click="logout" class="logout">Logout</button>
       </div>
       <form @submit.prevent="addTodo">
@@ -13,7 +13,7 @@
       <h2>📥 To-do List</h2>
       <ul>
         <li v-for="todo in todos" :key="todo.id">
-          <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }">
+          <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }" class="insert">
             {{ todo.text }}
           </span>
           <button @click="removeTodo(todo.id)" class="remove">Remove</button>
@@ -84,23 +84,36 @@ export default {
 <style scoped>
 .remove{
   margin: 0.2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-left: 2em;
+  /* color: red; */
+  background-color: rgb(203, 61, 61);
+  color: white;
+  border-radius: 10px;
 }
 .complete{
   margin: 0.2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  /* color: green; */
+  background-color: rgb(29, 145, 29);
+  color: white;
+  border-radius: 10px;
 }
 .logout{
   margin-bottom: 0.6rem;
   margin-top: 0rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .addtodo{
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .insert{
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
-
+.uh{
+  font-size: 3.2rem;
+}
+.welcomemsg{
+  font-size: 2rem;
+}
 </style> 

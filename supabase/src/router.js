@@ -7,9 +7,14 @@ import Welcome from './views/Welcome.vue'
 import { useAuthStore } from './stores/auth'
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/signup', component: SignUp },
-    { path: '/signin', component: SignIn },
+    { 
+        path: '/', 
+        component: Home },
+    {   path: '/signup', 
+        component: SignUp },
+    { 
+        path: '/signin', 
+        component: SignIn },
     { 
       path: '/welcome', 
       component: Welcome, 

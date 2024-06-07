@@ -67,7 +67,8 @@ export default {
   border-radius: 10px;
 }
 .signinheading{
-  font-size: 2.2rem;
+  font-size: 2.6rem;
+  
 }
 .bigheading{
   font-size: 3rem;

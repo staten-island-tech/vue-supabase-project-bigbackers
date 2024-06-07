@@ -54,7 +54,8 @@ export default {
   font-size: 1.5rem;
 }
 .signupheading{
-  font-size: 3rem;
+  font-size: 2.6rem;
+  
 }
 .alracc{
   font-size: 1.5rem;

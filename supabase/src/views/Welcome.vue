@@ -10,16 +10,18 @@
         <input v-model="newTodo" type="text" placeholder="New To-do" required class="insert"/>
         <button type="submit" class="addtodo">Add To-do</button>
       </form>
-      <h2>📥 To-do List</h2>
+    <div class="todolist">
+      <h2 class="todolistheading">📥 To-do List</h2>
       <ul>
         <li v-for="todo in todos" :key="todo.id">
-          <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }" class="insert">
+          <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }" class="insertuh">
             {{ todo.text }}
           </span>
           <button @click="removeTodo(todo.id)" class="remove">Remove</button>
           <button @click="markTodoAsCompleted(todo.id)" v-if="!todo.completed" class="complete">Mark as Completed</button>
         </li>
       </ul>
+    </div>
     </div>
   </div>
 </template>
@@ -107,6 +109,10 @@ export default {
 .addtodo{
   font-size: 1.5rem;
 }
+.insertuh{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .insert{
   font-size: 1.5rem;
 }
@@ -115,5 +121,17 @@ export default {
 }
 .welcomemsg{
   font-size: 2rem;
+}
+.todolist{
+  background-image: url("/src/yellow.jpg") ;
+  width: 900px;
+  height: 300px;
+  align-items: center;
+  margin-left: 35rem;
+  border-radius: 10px;
+}
+.todolistheading{
+  font-size: 2.1rem;
+  text-decoration: underline;
 }
 </style> 

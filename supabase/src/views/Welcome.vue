@@ -7,7 +7,7 @@
         <button @click="logout" class="logout">Logout</button>
       </div>
       <form @submit.prevent="addTodo">
-        <input v-model="newTodo" type="text" placeholder="New To-do" required class="insert"/>
+        <input v-model="newTodo" type="text" placeholder="New To-do" required class="insert" aria-label="addtodo"/>
         <button type="submit" class="addtodo">Add To-do</button>
       </form>
     <div class="todolist">

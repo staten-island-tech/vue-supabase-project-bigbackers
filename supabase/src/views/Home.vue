@@ -10,8 +10,8 @@
       <h1 class="bigheading">Login to see your To-Do List!</h1>
       <h2 class="signinheading">Sign In</h2>
       <form @submit.prevent="signIn" >
-        <input v-model="email" type="email" placeholder="Email" required class="email"/>
-        <input v-model="password" type="password" placeholder="Password" required class="password"/>
+        <input v-model="email" type="email" placeholder="Email" required class="email"aria-label="inputemail"/>
+        <input v-model="password" type="password" placeholder="Password" required class="password" aria-label="inputpassword"/>
         <button type="submit" class="signin">Sign In</button>
       </form>
       <p>{{ error }}</p>

@@ -2,8 +2,8 @@
   <div class="signupbox">
     <h2 class="signupheading">Sign Up</h2>
     <form @submit.prevent="signUp">
-      <input v-model="email" type="email" placeholder="Email" required class="email"/>
-      <input v-model="password" type="password" placeholder="Password" required class="password"/>
+      <input v-model="email" type="email" placeholder="Email" required class="email" aria-label="signupemail"/>
+      <input v-model="password" type="password" placeholder="Password" required class="password" aria-label="signuppassword"/>
       <button type="submit" class="signup">Sign Up</button>
     </form>
     <p>{{ error }}</p>

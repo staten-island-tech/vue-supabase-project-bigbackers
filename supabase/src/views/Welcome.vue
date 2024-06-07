@@ -1,25 +1,27 @@
 <template>
   <div>
-    <h1>Your To-Do List</h1>
+    <h1 class="uh">Your To-Do List</h1>
     <div v-if="user">
       <div>
-        <h2>Welcome, {{ user.email }}</h2>
-        <button @click="logout">Logout</button>
+        <h2 class="welcomemsg">Welcome, {{ user.email }}!!!</h2>
+        <button @click="logout" class="logout">Logout</button>
       </div>
       <form @submit.prevent="addTodo">
-        <input v-model="newTodo" type="text" placeholder="New To-do" required />
-        <button type="submit">Add To-do</button>
+        <input v-model="newTodo" type="text" placeholder="New To-do" required class="insert"/>
+        <button type="submit" class="addtodo">Add To-do</button>
       </form>
-      <h2>📥 To-do List</h2>
+    <div class="todolist">
+      <h2 class="todolistheading">📥 To-do List</h2>
       <ul>
         <li v-for="todo in todos" :key="todo.id">
-          <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }">
+          <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }" class="insertuh">
             {{ todo.text }}
           </span>
-          <button @click="removeTodo(todo.id)">Remove</button>
-          <button @click="markTodoAsCompleted(todo.id)" v-if="!todo.completed">Mark as Completed</button>
+          <button @click="removeTodo(todo.id)" class="remove">Remove</button>
+          <button @click="markTodoAsCompleted(todo.id)" v-if="!todo.completed" class="complete">Mark as Completed</button>
         </li>
       </ul>
+    </div>
     </div>
   </div>
 </template>
@@ -81,6 +83,55 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.remove{
+  margin: 0.2rem;
+  font-size: 1.5rem;
+  margin-left: 2em;
+  /* color: red; */
+  background-color: rgb(203, 61, 61);
+  color: white;
+  border-radius: 10px;
+}
+.complete{
+  margin: 0.2rem;
+  font-size: 1.5rem;
+  /* color: green; */
+  background-color: rgb(29, 145, 29);
+  color: white;
+  border-radius: 10px;
+}
+.logout{
+  margin-bottom: 0.6rem;
+  margin-top: 0rem;
+  font-size: 1.5rem;
+}
+.addtodo{
+  font-size: 1.5rem;
+}
+.insertuh{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.insert{
+  font-size: 1.5rem;
+}
+.uh{
+  font-size: 3.2rem;
+}
+.welcomemsg{
+  font-size: 2rem;
+}
+.todolist{
+  background-image: url("/src/yellow.jpg") ;
+  width: 900px;
+  height: 300px;
+  align-items: center;
+  margin-left: 35rem;
+  border-radius: 10px;
+}
+.todolistheading{
+  font-size: 2.1rem;
+  text-decoration: underline;
+}
 </style> 

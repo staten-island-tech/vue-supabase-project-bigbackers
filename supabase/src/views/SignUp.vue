@@ -7,7 +7,7 @@
       <button type="submit" class="signup">Sign Up</button>
     </form>
     <p>{{ error }}</p>
-    <p class="alracc">Already have an account? <router-link to="/signin">Sign In</router-link></p>
+    <heading class="alracc">Already have an account? <router-link to="/signin">Sign In</router-link></heading>
   </div>
 </template>
 

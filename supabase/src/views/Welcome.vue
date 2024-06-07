@@ -1,4 +1,4 @@
-<template>
+<template class="wholething">
   <div>
     <h1 class="uh">Your To-Do List</h1>
     <div v-if="user">
@@ -118,6 +118,7 @@ export default {
 }
 .uh{
   font-size: 3.2rem;
+  text-decoration: underline;
 }
 .welcomemsg{
   font-size: 2rem;

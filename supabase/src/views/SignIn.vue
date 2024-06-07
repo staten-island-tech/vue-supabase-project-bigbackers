@@ -10,7 +10,7 @@
             <button type="submit" class="signin">Sign In</button>
         </form>
         <p>{{ error }}</p>
-        <p class="noacc">Don't have an account? <router-link to="/signup">Sign Up</router-link></p>
+        <heading class="noacc">Don't have an account? <router-link to="/signup">Sign Up</router-link></heading>
     </div>
 </template>
 

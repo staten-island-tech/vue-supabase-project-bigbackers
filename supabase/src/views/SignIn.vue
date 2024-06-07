@@ -5,8 +5,8 @@
     <div class="signinbox">
         <h2 class="signinheading">Sign In</h2>
         <form @submit.prevent="signIn">
-            <input v-model="email" type="email" placeholder="Email" required class="email"/>
-            <input v-model="password" type="password" placeholder="Password" required class="password"/>
+            <input v-model="email" type="email" placeholder="Email" required class="email" aria-label="signinemail"/>
+            <input v-model="password" type="password" placeholder="Password" required class="password"aria-label="signinpassword"/>
             <button type="submit" class="signin">Sign In</button>
         </form>
         <p>{{ error }}</p>

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="app">
     <Navbar />
     <RouterView />
@@ -32,7 +32,7 @@ const component = {
 </script>
 <style scoped>
 
-</style>
+</style> -->
 
 
 <!-- <script setup>

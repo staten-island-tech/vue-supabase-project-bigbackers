@@ -4,7 +4,9 @@
       <h2 class="welcomehome">Welcome Home!</h2>
       <button @click="signOut" class="signout">Sign Out</button>
     </div>
+        
     <div v-else class="signinbox">
+      <h1 class="bigheading">Login to see your To-Do List!</h1>
       <h2 class="signinheading">Sign In</h2>
       <form @submit.prevent="signIn" >
         <input v-model="email" type="email" placeholder="Email" required class="email"/>
@@ -72,7 +74,8 @@ export default {
   font-size: 1.5rem;
 }
 .signinheading{
-  font-size: 2.6rem;
+  font-size: 2.3rem;
+  margin-top: 1rem;
 }
 .signup{
   font-size: 1.5rem;
@@ -93,5 +96,8 @@ export default {
   align-items: center;
   margin-left: 30rem;
   border-radius: 10px;
+}
+.bigheading{
+  font-size: 2.6rem;
 }
 </style>

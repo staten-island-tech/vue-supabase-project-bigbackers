@@ -57,6 +57,10 @@ export default {
 }
 .signin{
   font-size: 1.5rem;
+  background-color: rgb(42, 67, 159);
+  color: white;
+  border-radius: 10px;
+  margin-left: 1rem;
 }
 .signinbox {
   background-color: rgb(168, 219, 238);

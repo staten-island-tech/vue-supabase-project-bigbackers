@@ -74,6 +74,10 @@ export default {
 }
 .signin{
   font-size: 1.5rem;
+  background-color: rgb(29, 54, 145);
+  color: white;
+  border-radius: 10px;
+  margin-left: 1rem;
 }
 .signinheading{
   font-size: 2.3rem;
@@ -90,6 +94,8 @@ export default {
 }
 .signout{
   font-size: 2rem;
+  background-color: rgb(42, 67, 159);
+  color: white;
 }
 .signinbox {
   background-color: rgb(168, 219, 238);

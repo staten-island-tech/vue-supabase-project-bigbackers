@@ -52,6 +52,10 @@ export default {
 }
 .signup{
   font-size: 1.5rem;
+  background-color: rgb(42, 67, 159);
+  color: white;
+  border-radius: 10px;
+  margin-left: 1rem;
 }
 .signupheading{
   font-size: 2.6rem;
